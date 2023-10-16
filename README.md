@@ -130,7 +130,7 @@ Currying is a technique where a function that takes multiple arguments is transf
 
 While Java doesn't have native support for currying, you can simulate it using BiFunction. Here's a simple example:
 
-java
+```java
 import java.util.function.BiFunction;
 
 public class BiFunctionExample {
@@ -146,12 +146,13 @@ public class BiFunctionExample {
         System.out.println(result); // Output: 8
     }
 }
+```
 
 ## Chaining BiFunctions
 
 You can chain multiple BiFunction instances together to create a pipeline of operations. Here's an example where we have two BiFunction instances, and we chain them to perform sequential operations:
 
-java
+```java
 import java.util.function.BiFunction;
 
 public class BiFunctionExample {
@@ -168,12 +169,13 @@ public class BiFunctionExample {
         System.out.println(result); // Output: 16
     }
 }
+```
 
 ## Handling Exceptions with BiFunction
 
 You can use BiFunction to handle exceptions by using a wrapper class like Either or Try. For simplicity, let's consider using Either from a library like Vavr:
 
-java
+```java
 import io.vavr.control.Either;
 import java.util.function.BiFunction;
 
@@ -199,5 +201,6 @@ public class BiFunctionExample {
         );
     }
 }
+```
 
 In this example, the divide function returns an Either representing either an error message or the result of the division. The fold method is then used to handle both cases.
