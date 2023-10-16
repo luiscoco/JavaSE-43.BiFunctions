@@ -1,22 +1,25 @@
 # JavaSE-BiFunctions
 
-In Java, the BiFunction interface is a part of the java.util.function package and represents a function that takes two arguments and produces a result. It is a functional interface, which means it can be used as the assignment target for a lambda expression or method reference.
+In Java, the BiFunction interface is a part of the java.util.function package and represents a function that takes two arguments and produces a result. 
+
+It is a functional interface, which means it can be used as the assignment target for a lambda expression or method reference.
 
 Here's the basic structure of the BiFunction interface:
 
-java
-Copy code
+```java
 @FunctionalInterface
 public interface BiFunction<T, U, R> {
     R apply(T t, U u);
 }
+```
+
 T: the type of the first input argument.
 U: the type of the second input argument.
 R: the type of the result.
+
 You can use BiFunction in various scenarios where you need to define a function that takes two inputs and produces a result. Here's an example:
 
-java
-Copy code
+```java
 import java.util.function.BiFunction;
 
 public class BiFunctionExample {
@@ -30,22 +33,21 @@ public class BiFunctionExample {
         System.out.println(multiply.apply(5, 3));
     }
 }
+```
+
 In this example:
 
 concatenate is a BiFunction that takes two strings and concatenates them.
+
 multiply is a BiFunction that takes two integers and multiplies them.
+
 Feel free to ask if you have any specific questions about BiFunction or if you'd like more examples!
 
+# More samples about "java.util.function.BiFunction" in Java
 
+## Example 1: Adding two numbers
 
-
-User
-can you give me more samples about "java.util.function.BiFunction" in Java
-ChatGPT
-Absolutely! Let's explore a few more examples of using BiFunction in Java:
-
-Example 1: Adding two numbers
-java
+```java
 Copy code
 import java.util.function.BiFunction;
 
@@ -55,9 +57,10 @@ public class BiFunctionExample {
         System.out.println(add.apply(10, 20)); // Output: 30
     }
 }
-Example 2: Finding the maximum of two numbers
-java
-Copy code
+```
+
+## Example 2: Finding the maximum of two numbers
+```java
 import java.util.function.BiFunction;
 
 public class BiFunctionExample {
@@ -66,9 +69,10 @@ public class BiFunctionExample {
         System.out.println(findMax.apply(15, 8)); // Output: 15
     }
 }
-Example 3: Combining two strings with a separator
-java
-Copy code
+```
+
+## Example 3: Combining two strings with a separator
+```java
 import java.util.function.BiFunction;
 
 public class BiFunctionExample {
@@ -77,9 +81,10 @@ public class BiFunctionExample {
         System.out.println(combineWithSeparator.apply("Apple", "Orange")); // Output: Apple | Orange
     }
 }
-Example 4: Checking if one string contains another
-java
-Copy code
+```
+
+## Example 4: Checking if one string contains another
+```java
 import java.util.function.BiFunction;
 
 public class BiFunctionExample {
@@ -88,9 +93,10 @@ public class BiFunctionExample {
         System.out.println(containsCheck.apply("Hello, world!", "world")); // Output: true
     }
 }
-Example 5: Creating a custom object from two input values
-java
-Copy code
+```
+
+## Example 5: Creating a custom object from two input values
+```java
 import java.util.function.BiFunction;
 
 class Point {
@@ -110,18 +116,19 @@ public class BiFunctionExample {
         System.out.println("Point coordinates: (" + point.x + ", " + point.y + ")");
     }
 }
+```
+
 These examples demonstrate different use cases of BiFunction in Java. Let me know if you have more specific scenarios or if you'd like further clarification on any of these examples!
 
+# More advance topics about "java.util.function.BiFunction" in Java
 
+Let's delve into some more advanced topics and scenarios involving BiFunction in Java:
 
+## Currying with BiFunction
 
-User
-can you explain me more advance topics about "java.util.function.BiFunction" in Java
-ChatGPT
-Certainly! Let's delve into some more advanced topics and scenarios involving BiFunction in Java:
+Currying is a technique where a function that takes multiple arguments is transformed into a series of functions that each take a single argument. 
 
-Currying with BiFunction
-Currying is a technique where a function that takes multiple arguments is transformed into a series of functions that each take a single argument. While Java doesn't have native support for currying, you can simulate it using BiFunction. Here's a simple example:
+While Java doesn't have native support for currying, you can simulate it using BiFunction. Here's a simple example:
 
 java
 Copy code
@@ -140,7 +147,9 @@ public class BiFunctionExample {
         System.out.println(result); // Output: 8
     }
 }
-Chaining BiFunctions
+
+## Chaining BiFunctions
+
 You can chain multiple BiFunction instances together to create a pipeline of operations. Here's an example where we have two BiFunction instances, and we chain them to perform sequential operations:
 
 java
@@ -161,7 +170,9 @@ public class BiFunctionExample {
         System.out.println(result); // Output: 16
     }
 }
-Handling Exceptions with BiFunction
+
+## Handling Exceptions with BiFunction
+
 You can use BiFunction to handle exceptions by using a wrapper class like Either or Try. For simplicity, let's consider using Either from a library like Vavr:
 
 java
